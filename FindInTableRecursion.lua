@@ -16,18 +16,18 @@
 		if v == val then
 		cache[Table][val] = t
 			 FoundTable = t
-			  break
-			elseif typeof(v) == "table" then
-			if table.find(v, val) then
-			cache[Table][val] = v
-			        FoundTable = v
-					break
-				  elseif FoundTable == nil then
-				Recurse(v,val )
-					else
+	  break
+	elseif typeof(v) == "table" then
+	if table.find(v, val) then
+	cache[Table][val] = v
+			   FoundTable = v
 			break
-			end
-		 end
+		  elseif FoundTable == nil then
+			Recurse(v,val )
+		    else
+		break
+	      end
+	       end
 	   end
 	 end
       Recurse(Table,Value)	
