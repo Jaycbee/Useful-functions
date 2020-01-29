@@ -1,6 +1,6 @@
 
-local function Find(Table, Value, cacheresult )
-if  cache[Table]== nil  then
+ local function Find(Table, Value, cacheresult )
+    if  cache[Table]== nil  then
 		cache[Table]  = {}
     end
  if  cacheresult and cache[Table][Value] then
@@ -19,7 +19,7 @@ local FoundTable
 				      break
 			  elseif typeof(v) == "table" then
 			if table.find(v, val) then
-				cache[Table][val] = v
+			cache[Table][val] = v
 			        FoundTable = v
 					break
 				  elseif FoundTable == nil then
