@@ -10,7 +10,7 @@
 		cache[Table][Value] 	= nil
 	  end
   end
-local FoundTable
+ local FoundTable
    local function Recurse (t, val)
 		for index, v in pairs(t) do
 			if v == val then
