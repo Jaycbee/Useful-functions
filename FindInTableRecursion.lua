@@ -1,5 +1,5 @@
 
-  local function Find(Table, Value, cacheresult )
+  local function Find(Table, Value, cacheresult ) ----Returns a the table the given value is in, or nil if not found
     if  cache[Table]== nil  then
 		cache[Table]  = {}
     end
