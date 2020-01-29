@@ -13,11 +13,11 @@
  local FoundTable
    local function Recurse (t, val)
 		for index, v in pairs(t) do
-			if v == val then
-				cache[Table][val] = t
-				  FoundTable = t
-				      break
-			  elseif typeof(v) == "table" then
+		if v == val then
+		cache[Table][val] = t
+			 FoundTable = t
+			  break
+			elseif typeof(v) == "table" then
 			if table.find(v, val) then
 			cache[Table][val] = v
 			        FoundTable = v
@@ -28,7 +28,7 @@
 				break
 			end
 		 end
-		end
+	   end
 	 end
       Recurse(Table,Value)	
    return FoundTable
