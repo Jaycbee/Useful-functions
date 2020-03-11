@@ -58,11 +58,12 @@ end
 
 
 local function test(NotTouchingparts, Parts) 
-  for _, Parts in pairs(Parts) do
-	if _ ~= game.Workspace.Baseplate then 
-		if TestTable[_] == nil then
-	        _.CanCollide = false
-	      TestTable[_] = true
+  for Part, Part in pairs(Parts) do
+	if Part ~= game.Workspace.Baseplate then 
+		if TestTable[Part] == nil then
+	        Part.CanCollide = false
+		 print("Stopped Touching"..Part)
+	      TestTable[Part] = true
 	      end
 	  end
    end
